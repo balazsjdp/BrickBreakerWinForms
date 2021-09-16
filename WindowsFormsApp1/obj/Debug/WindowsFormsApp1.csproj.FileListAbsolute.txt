@@ -1,0 +1,9 @@
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\01 DEV\__repos\brbr2\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\BrBr2.GameScene.resources
