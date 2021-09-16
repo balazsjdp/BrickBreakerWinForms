@@ -1,13 +1,6 @@
 ﻿using BrBr2.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Classes;
 
@@ -15,9 +8,11 @@ namespace BrBr2
 {
     public partial class GameScene : Form
     {
+        // Initialize basic elements
         Ball ball = new Ball(5,new Point(300,600),7.5f);
         Platform platform = new Platform(60,5,new PointF(500,580));
-     
+        PlatformMoveDirection platformMoveDirection;
+
         public GameScene()
         {
             InitializeComponent();
@@ -45,13 +40,28 @@ namespace BrBr2
 
         private void DrawPlatform(PaintEventArgs e)
         {
+            platform.Move(platformMoveDirection);
             platform.Draw(e);
         }
 
         private void GameScene_KeyDown(object sender, KeyEventArgs e)
         {
-            platform.Move(e);
-            Console.WriteLine(e.KeyCode);
+            if (e.KeyCode == Keys.Right || e.KeyCode == Keys.Left)
+            {
+                if (e.KeyCode == Keys.Right)
+                {
+                    platformMoveDirection = PlatformMoveDirection.Right;
+                }
+                if (e.KeyCode == Keys.Left)
+                {
+                    platformMoveDirection = PlatformMoveDirection.Left;
+                }
+            }
+        }
+
+        private void GameScene_KeyUp(object sender, KeyEventArgs e)
+        {
+            platformMoveDirection = PlatformMoveDirection.None;
         }
     }
 }

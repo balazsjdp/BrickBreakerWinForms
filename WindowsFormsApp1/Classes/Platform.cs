@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Classes
 {
     class Platform
     {
-        private int width;
-        private int height;
         private Pen blackPen = new Pen(Color.Black, 3);
         private SolidBrush brush = new SolidBrush(Color.Black);
+
+        private int width;
+        private int height;
         PointF coordinates;
-        private float v = 15;
+        private float v = 20;
 
         public Platform(int w, int h, PointF initialCoords)
         {
@@ -30,19 +26,27 @@ namespace WindowsFormsApp1.Classes
             e.Graphics.FillRectangle(brush, coordinates.X, coordinates.Y, width, height);
         }
 
-        public void Move(KeyEventArgs e)
+        public void Move(PlatformMoveDirection dir)
         {
-            if(e.KeyCode == Keys.Right || e.KeyCode == Keys.Left)
+            switch (dir)
             {
-                if (e.KeyCode == Keys.Right)
-                {
+                case PlatformMoveDirection.Right:
                     coordinates.X = coordinates.X + 1.0f * v;
-                }
-                if (e.KeyCode == Keys.Left)
-                {
+                    break;
+                case PlatformMoveDirection.Left:
                     coordinates.X = coordinates.X - 1.0f * v;
-                }
+                    break;
+                case PlatformMoveDirection.None:
+                    coordinates.X = coordinates.X;
+                    break;
             }
         }
+    }
+    
+    enum PlatformMoveDirection
+    {
+        None,
+        Left,
+        Right
     }
 }

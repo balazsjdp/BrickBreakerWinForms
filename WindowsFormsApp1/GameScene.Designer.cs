@@ -41,7 +41,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(918, 745);
             this.pictureBox1.TabIndex = 0;
@@ -54,10 +54,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 760);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameScene";
             this.Text = "GameScene";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameScene_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameScene_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

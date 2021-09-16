@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
+﻿using System.Drawing;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BrBr2.Classes
 {
     class Ball
     {
-        private Graphics g;
+        private Pen blackPen = new Pen(Color.Black, 3);
+        private SolidBrush brush = new SolidBrush(Color.Black);
+
         private float radius;
         public float v;
         public PointF coordinates;
@@ -55,7 +52,6 @@ namespace BrBr2.Classes
                 float oldX = direction.X;
                 float oldY = direction.Y;
 
-
                 Vector2 newDirection = new Vector2(oldX * -1, oldY);
                 direction = newDirection;
             }
@@ -64,7 +60,6 @@ namespace BrBr2.Classes
             {
                 float oldX = direction.X;
                 float oldY = direction.Y;
-
 
                 Vector2 newDirection = new Vector2(oldX, oldY * -1 );
                 direction = newDirection;
