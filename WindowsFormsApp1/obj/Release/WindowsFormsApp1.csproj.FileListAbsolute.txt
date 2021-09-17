@@ -1,0 +1,12 @@
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\bin\Release\Stages\1.level
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\bin\Release\Stages\2.level
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\bin\Release\BrBr2.exe.config
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\bin\Release\BrBr2.exe
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\bin\Release\BrBr2.pdb
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csprojAssemblyReference.cache
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\obj\Release\BrBr2.GameScene.resources
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\obj\Release\BrBr2.Properties.Resources.resources
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.GenerateResource.cache
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\obj\Release\BrBr2.exe
+Q:\01 Projects\BrickBreakerWinForms\WindowsFormsApp1\obj\Release\BrBr2.pdb

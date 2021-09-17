@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Numerics;
 using System.Windows.Forms;
 
@@ -8,11 +9,12 @@ namespace BrBr2.Classes
     {
         private Pen blackPen = new Pen(Color.Black, 3);
         private SolidBrush brush = new SolidBrush(Color.Black);
-
-        private float radius;
+        private BallPosition ballPos;
+        public float radius;
+        private float initialVel;
         public float v;
         public PointF coordinates;
-        public Vector2 direction = new Vector2(-2, -1);
+        public Vector2 direction = new Vector2(-1.0f, -1.0f);
         public PictureBox container;
 
         public Ball(float r, PointF initialCoords, float velocity)
@@ -20,6 +22,7 @@ namespace BrBr2.Classes
             coordinates = initialCoords;
             radius = r;
             v = velocity;
+            initialVel = velocity;
         }
 
 
@@ -36,6 +39,12 @@ namespace BrBr2.Classes
             HittingWall();
             coordinates.X = coordinates.X + direction.X * v;
             coordinates.Y = coordinates.Y + direction.Y * v;
+            ballPos = new BallPosition(coordinates.X, coordinates.Y, radius);
+
+            // Limit speed of the ball
+            if (this.v > 10f) this.v = 10f;
+            // If the ball has accelerated, start to decrease speed
+            if (this.v > initialVel) DecreaseSpeed();
         }
 
 
@@ -65,6 +74,32 @@ namespace BrBr2.Classes
                 direction = newDirection;
             }
 
+            //|| coordinates.Y >= bottom
         }
+
+        public BallPosition GetPosition()
+        {
+            return ballPos;
+        }
+
+        public void DecreaseSpeed()
+        {
+            this.v = this.v - 0.01f;
+        }
+    }
+
+    class BallPosition
+    {
+        public float x { get; set; }
+        public float y { get; set; }
+        public float r { get; set; }
+
+        public BallPosition(float X, float Y, float rad)
+        {
+            x = X;
+            y = Y;
+            r = rad;
+        }
+
     }
 }
